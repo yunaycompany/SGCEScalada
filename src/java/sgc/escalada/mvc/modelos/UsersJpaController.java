@@ -24,7 +24,7 @@ import sgc.escalada.mvc.modelos.exceptions.PreexistingEntityException;
 
 /**
  *
- * @author Ariam
+ * @author Yosbel
  */
 public class UsersJpaController implements Serializable {
 

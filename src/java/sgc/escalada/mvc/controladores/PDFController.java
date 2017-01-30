@@ -35,7 +35,7 @@ import sgc.escalada.mvc.modelos.CompetenciaModel;
 
 /**
  *
- * @author rolando
+ * @author Yosbel
  */
 @Controller
 public class PDFController {

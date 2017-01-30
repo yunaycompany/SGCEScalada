@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Ariam
+ * @author Yosbel
  */
 @Entity
 @Table(name = "sgc_escalada.nom_sexo")

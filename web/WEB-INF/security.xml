@@ -93,7 +93,7 @@
     <!--authentication-manager>
         <authentication-provider>
             <user-service>
-                <user name="rolando" password="123456" authorities="ROLE_USER" />
+                <user name="Yosbel" password="123456" authorities="ROLE_USER" />
                 <user name="admin1" password="admin1Pass" authorities="ROLE_ADMIN" />
             </user-service>
         </authentication-provider>

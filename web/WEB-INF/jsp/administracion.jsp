@@ -1,7 +1,7 @@
 <%-- 
     Document   : administracion
     Created on : 21-jun-2015, 16:07:30
-    Author     : rolando
+    Author     : Yosbel
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
        pageEncoding="UTF-8"%>

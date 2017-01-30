@@ -26,7 +26,7 @@ import sgc.escalada.mvc.modelos.exceptions.NonexistentEntityException;
 
 /**
  *
- * @author Ariam
+ * @author Yosbel
  */
 @Controller
 public class UsuarioController {

@@ -29,7 +29,7 @@ import sgc.escalada.mvc.modelos.DeportistaModel;
 
 /**
  *
- * @author rolando
+ * @author Yosbel
  */
 @Controller
 public class AllroundController {

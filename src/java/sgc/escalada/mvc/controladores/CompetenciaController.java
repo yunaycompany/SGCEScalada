@@ -44,7 +44,7 @@ import sgc.escalada.mvc.modelos.ResultadoModel;
 
 /**
  *
- * @author rolando
+ * @author Yosbel
  */
 @Controller
 public class CompetenciaController {

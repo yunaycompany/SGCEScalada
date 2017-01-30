@@ -29,7 +29,7 @@ import sgc.escalada.mvc.modelos.exceptions.NonexistentEntityException;
 
 /**
  *
- * @author Ariam
+ * @author Yosbel
  */
 public class GaleriaModel implements Serializable {
 

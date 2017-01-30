@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  *
- * @author rolando
+ * @author Yosbel
  */
 @Controller
 public class PrincipalController {

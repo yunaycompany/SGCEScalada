@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Ariam
+ * @author Yosbel
  */
 @Entity
 @Table(name = "sgc_escalada.dat_usuario")

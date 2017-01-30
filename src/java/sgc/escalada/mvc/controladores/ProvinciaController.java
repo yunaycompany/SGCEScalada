@@ -28,7 +28,7 @@ import sgc.escalada.mvc.modelos.ProvinciaModel;
 
 /**
  *
- * @author Ariam
+ * @author Yosbel
  */
 @Controller
 public class ProvinciaController {

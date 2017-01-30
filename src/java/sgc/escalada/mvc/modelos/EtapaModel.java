@@ -25,7 +25,7 @@ import sgc.escalada.mvc.modelos.exceptions.NonexistentEntityException;
 
 /**
  *
- * @author Ariam
+ * @author Yosbel
  */
 public class EtapaModel implements Serializable {
 

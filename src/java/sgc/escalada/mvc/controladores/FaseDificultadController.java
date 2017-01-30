@@ -30,7 +30,7 @@ import sgc.escalada.mvc.modelos.FaseDificultadModel;
 
 /**
  *
- * @author rolando
+ * @author Yosbel
  */
 @Controller
 public class FaseDificultadController {

@@ -45,7 +45,7 @@ import sgc.escalada.mvc.modelos.exceptions.PreexistingEntityException;
 
 /**
  *
- * @author rolando
+ * @author Yosbel
  */
 @Controller
 public class DeportistaController {

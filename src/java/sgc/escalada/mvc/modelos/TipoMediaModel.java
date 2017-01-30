@@ -24,7 +24,7 @@ import sgc.escalada.mvc.modelos.exceptions.NonexistentEntityException;
 
 /**
  *
- * @author Ariam
+ * @author Yosbel
  */
 public class TipoMediaModel implements Serializable {
 

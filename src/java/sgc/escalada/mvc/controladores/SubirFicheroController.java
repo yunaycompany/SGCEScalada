@@ -28,7 +28,7 @@ import sgc.escalada.mvc.modelos.GaleriaModel;
 
 /**
  *
- * @author Ariam
+ * @author Yosbel
  */
 @Controller
 public class SubirFicheroController {

@@ -28,7 +28,7 @@ import sgc.escalada.mvc.modelos.ParroquiaModel;
 
 /**
  *
- * @author Ariam
+ * @author Yosbel
  */
 @Controller
 public class ParroquiaController {

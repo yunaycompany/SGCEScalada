@@ -19,7 +19,7 @@ import sgc.escalada.mvc.modelos.RolModel;
 
 /**
  *
- * @author Ariam
+ * @author Yosbel
  */
 @Controller
 public class RolController {

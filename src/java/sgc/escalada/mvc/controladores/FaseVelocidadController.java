@@ -31,7 +31,7 @@ import sgc.escalada.mvc.modelos.FaseVelocidadModel;
 
 /**
  *
- * @author rolando
+ * @author Yosbel
  */
 @Controller
 public class FaseVelocidadController {

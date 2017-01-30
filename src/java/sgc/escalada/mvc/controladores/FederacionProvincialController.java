@@ -23,7 +23,7 @@ import sgc.escalada.mvc.modelos.FederacionProvincialModel;
 
 /**
  *
- * @author rolando
+ * @author Yosbel
  */
 @Controller
 public class FederacionProvincialController {

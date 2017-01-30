@@ -27,7 +27,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 
 /**
  *
- * @author rolando
+ * @author Yosbel
  */
 public class mySimpleUrlAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
 

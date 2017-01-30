@@ -28,7 +28,7 @@ import sgc.escalada.mvc.modelos.exceptions.PreexistingEntityException;
 
 /**
  *
- * @author Ariam
+ * @author Yosbel
  */
 public class FaseDificultadModel implements Serializable {
 

@@ -26,7 +26,7 @@ import sgc.escalada.mvc.modelos.CiudadModel;
 
 /**
  *
- * @author rolando
+ * @author Yosbel
  */
 @Controller
 public class CantonController {
