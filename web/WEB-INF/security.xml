@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+ 
+  
+    <http use-expressions="true" >
+        <intercept-url pattern="/app.js" access="permitAll" />
+        <intercept-url pattern="/appLoggin.js" access="permitAll" />
+        <intercept-url pattern="/app/**" access="permitAll" />
+        <intercept-url pattern="/ext4/**" access="permitAll" />
+        <intercept-url pattern="/img/**" access="permitAll" />
+        <intercept-url pattern="/login*" access="permitAll" />        
+        <intercept-url pattern="/index.htm" access="permitAll" />
+    
+        <intercept-url pattern="/insertarCompetencia.htm" access="hasAnyRole('Administrador','Jurado','Cliente')" />
+        <intercept-url pattern="/listarCompetencias.htm" access="permitAll" />
+        <intercept-url pattern="/listarCompetenciasNoFinalizadas.htm" access="permitAll" />
+        <intercept-url pattern="/inscribirDeportistasEnFases.htm" access="hasAnyRole('Administrador','Jurado')" />
+        <intercept-url pattern="/eliminarCompetencia.htm" access="hasAnyRole('Administrador','Jurado')" />  
+
+        <intercept-url pattern="/guardarAllRoundDG.htm" access="hasAnyRole('Administrador','Jurado')" />
+        <intercept-url pattern="/guardarAllRoundVG.htm" access="hasAnyRole('Administrador','Jurado')" />
+        <intercept-url pattern="/guardarAllRoundBG.htm" access="hasAnyRole('Administrador','Jurado')" />
+        <intercept-url pattern="/guardarAllRoundG.htm" access="hasAnyRole('Administrador','Jurado')" />
+        <intercept-url pattern="/listarAllRound.htm" access="permitAll" />
+
+        <intercept-url pattern="/insertarCanton.htm" access="hasAnyRole('Administrador','Jurado','Cliente')" />
+        <intercept-url pattern="/eliminarCanton.htm" access="hasAnyRole('Administrador','Jurado')" />
+        <intercept-url pattern="/listarCantones.htm" access="permitAll" />
+        <intercept-url pattern="/listarCantonesPorIdProvincia.htm" access="permitAll" />
+        
+        <intercept-url pattern="/insertarDeportista.htm" access="hasAnyRole('Administrador','Jurado','Cliente')" />
+        <intercept-url pattern="/eliminarDeportistas.htm" access="hasAnyRole('Administrador','Jurado')" />
+        <intercept-url pattern="/listarDeportistas.htm" access="permitAll" />        
+
+        <intercept-url pattern="/listarFaseBloque.htm" access="permitAll" />
+        <intercept-url pattern="/guardarFaseBloque.htm" access="hasAnyRole('Administrador','Jurado')" />
+
+        <intercept-url pattern="/listarFaseDificultad.htm" access="permitAll" />
+        <intercept-url pattern="/guardarFaseDificultad.htm" access="hasAnyRole('Administrador','Jurado')" />        
+
+        <intercept-url pattern="/listarFaseVelocidad.htm" access="permitAll" />
+        <intercept-url pattern="/guardarFaseVelocidad.htm" access="hasAnyRole('Administrador','Jurado')" />
+        
+        <intercept-url pattern="/eliminarFederacion.htm" access="hasAnyRole('Administrador','Jurado')" />
+        <intercept-url pattern="/insertarFederacionProvincial.htm" access="hasAnyRole('Administrador','Jurado','Cliente')" />
+        <intercept-url pattern="/listarFederaciones.htm" access="permitAll" />
+
+        <intercept-url pattern="/insertarLugar.htm" access="hasAnyRole('Administrador','Jurado','Cliente')" />
+        <intercept-url pattern="/listarLugares.htm" access="permitAll" />
+        <intercept-url pattern="/listarLugaresPorIdParroquia.htm" access="permitAll" />        
+        
+        <intercept-url pattern="/eliminarParroquia.htm" access="hasAnyRole('Administrador','Jurado')" />
+        <intercept-url pattern="/insertarParroquia.htm" access="hasAnyRole('Administrador','Jurado','Cliente')" />
+        <intercept-url pattern="/listarParroquias.htm" access="permitAll" />       
+         
+          <intercept-url pattern="/eliminarCiudad.htm" access="hasAnyRole('Administrador','Jurado')" />
+        <intercept-url pattern="/insertarCiudad.htm" access="hasAnyRole('Administrador','Jurado','Cliente')" />
+        <intercept-url pattern="/listarCiudades.htm" access="permitAll" />   
+        
+        <intercept-url pattern="/eliminarProvincia.htm" access="hasAnyRole('Administrador','Jurado')" />
+        <intercept-url pattern="/insertarProvincia.htm" access="hasAnyRole('Administrador','Jurado','Cliente')" />
+        <intercept-url pattern="/listarProvincias.htm" access="permitAll" />
+        
+        <intercept-url pattern="/subirFichero.htm" access="hasAnyRole('Administrador','Cliente')" />
+
+        <intercept-url pattern="/insertarUsuario.htm" access="hasAnyRole('Administrador','Cliente')" />
+        <intercept-url pattern="/listarUsuarios.htm" access="permitAll" />   
+        <intercept-url pattern="/eliminarUsuarios.htm" access="hasAnyRole('Administrador')" />
+        <intercept-url pattern="/modificarUsuario.htm" access="hasAnyRole('Administrador','Jurado','Cliente')" />  
+    
+
+        <intercept-url pattern="/principal.htm" access="isAuthenticated()" />
+        <!--intercept-url pattern="/**" access="denyAll" /-->
+ 
+        <form-login login-page='/login.htm'
+                    authentication-failure-url="/login.htm?error=true"
+                    username-parameter="username"
+                    password-parameter="password"
+                    authentication-success-handler-ref="myAuthenticationSuccessHandler"/>
+ 
+        <logout/>
+    </http>
+ 
+    <beans:bean id="myAuthenticationSuccessHandler"
+                class="sgc.escalada.mvc.controladores.mySimpleUrlAuthenticationSuccessHandler" />
+ 
+    <!-- este manera es los ususarios fijos en xml-->
+    <!--authentication-manager>
+        <authentication-provider>
+            <user-service>
+                <user name="rolando" password="123456" authorities="ROLE_USER" />
+                <user name="admin1" password="admin1Pass" authorities="ROLE_ADMIN" />
+            </user-service>
+        </authentication-provider>
+    </authentication-manager-->
+    
+    <authentication-manager>
+        <authentication-provider>
+            <jdbc-user-service data-source-ref="dataSource"
+                               users-by-username-query=
+		    "select username,password, enabled from sgc_escalada.users where username=?"
+                               authorities-by-username-query=
+		    "select username, role from sgc_escalada.user_roles where username =?  " />
+        </authentication-provider>
+    </authentication-manager>
+    
+    <!--creando el datourse aqui mismo-->
+    <beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+        <beans:property name="driverClassName" value="org.postgresql.Driver" />
+        <beans:property name="url" value="jdbc:postgresql://localhost:5432/escalada" />
+        <beans:property name="username" value="postgres" />
+        <beans:property name="password" value="1" />
+    </beans:bean>
+ 
+</beans:beans>
